@@ -5,3 +5,4 @@ matplotlib==3.8.2
 tensorflow
 pyttsx3==2.90
 keras_preprocessing
+signal
