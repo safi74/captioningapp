@@ -1,0 +1,1 @@
+web: sh setup.sh && streamlit run captioning_web_app.py
