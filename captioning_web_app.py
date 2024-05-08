@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
-
+from signal import signal, SIGPIPE, SIG_DFL   
+signal(SIGPIPE,SIG_DFL) 
 
 import streamlit as st
 
