@@ -124,7 +124,7 @@ def main():
     """
     st.markdown(background_img, unsafe_allow_html=True)
 
-    st.image("MGIT26yearsmotivate.jpg", caption=' ', use_column_width=False)
+    st.image("MGIT26yearsmotivate.jpg", caption=' ', use_column_width=True)
     
     #st.title(' :rainbow[AUTOMATIC IMAGE CAPTIONING AND DEPLOYMENT] ')
     st.markdown("<h1 style='text-align: center; color: white;'>AUTOMATIC IMAGE CAPTIONING AND DEPLOYMENT</h1>", unsafe_allow_html=True)
