@@ -15,8 +15,13 @@ from tensorflow.keras.applications.xception import Xception, preprocess_input
 
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
-import pyttsx3 #  text-to-speech (TTS) library: Text-to-Speech for Python
+from gtts import gTTS  #  text-to-speech (TTS) library: Google Text-to-Speech
+from io import BytesIO
+from IPython.display import Audio
 
+
+
+st.set_page_config(page_icon=":computer:", layout = "wide")
 
 
 # Define a function that takes an image as input and performs resizing, feature extraction and captioning
@@ -92,20 +97,19 @@ def image_captioning(uploaded_file):
 
 # Define a function to read aloud the generated caption
 def text_to_speech(text):
-    # Initialize the TTS engine
-    engine = pyttsx3.init()
-    # Set properties (optional)
-    engine.setProperty('rate', 150)  # Speed of speech
-    engine.setProperty('volume', 1)   # Volume (0.0 to 1.0)
-    # Convert text to speech
-    engine.say(text)
-    # Wait for speech to finish
-    engine.runAndWait()
+    # Generate audio using gTTS
+    tts = gTTS(text, lang='en', tld='co.in')
+    audio_bytes = BytesIO()
+    tts.write_to_fp(audio_bytes)
+    audio_bytes.seek(0)
+
+    # Play audio in the Streamlit app
+    st.audio(audio_bytes, format='audio/mp3')
 
 
 # define the main() function for streamlit
 def main():
-    st.set_page_config(page_icon=":computer:", layout = "wide")
+    
     background_img = """
     <style>
     [data-testid = "stAppViewContainer"] {
