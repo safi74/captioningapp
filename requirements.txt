@@ -4,4 +4,4 @@ streamlit==1.34.0
 matplotlib==3.8.2
 tensorflow
 pyttsx3==2.90
-keras
+keras_preprocessing
