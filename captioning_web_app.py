@@ -125,7 +125,7 @@ def main():
 
     st.image("MGIT26yearsmotivate.jpg", caption=' ', use_column_width=True)
     
-    st.title(' :rainbow[AUTOMATIC IMAGE CAPTIONING AND DEPLOYMENT] ')
+    #st.title(' :rainbow[AUTOMATIC IMAGE CAPTIONING AND DEPLOYMENT] ')
     st.markdown("<h1 style='text-align: center; color: white;'>AUTOMATIC IMAGE CAPTIONING AND DEPLOYMENT</h1>", unsafe_allow_html=True)
     #st.markdown("<h1 style='text-align: center; color: teal;'>Automatic Image Captioning and Deployment</h1>", unsafe_allow_html=True)
     #st.markdown("<h1 style='text-align: center; color: aqua;'>AUTOMATIC IMAGE CAPTIONING AND DEPLOYMENT</h1>", unsafe_allow_html=True)
